@@ -4,9 +4,7 @@ student_scores = {
 'Maria': 5.50,
 'Georgi': 5.00
 }
-#del student_scores[student_scores.keys if student_scores.values() < 4]
-del student_scores['Alexander']
-best_students_scores = student_scores
+best_students_scores = { students: scores for students, scores in list(student_scores.items()) if scores > 4}
 
 for student, scores in best_students_scores.items():
     print("{} - {}".format(student, scores))
